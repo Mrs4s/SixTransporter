@@ -39,6 +39,6 @@ var taskInfo = new DownloadTaskInfo()
   Threads = 4,
   Limiter = new SpeedLimiter { Limit = 1024 } // 下载速度限制器，单位byte
 };
-var task = new HttpDownloader(taskInfo);
+var task = new HttpDownloader(taskInfo); // 下载默认会在StartDownload函数初始化, 保存下载进度文件到file.downloading文件
 task.StartDownload();
 ```
