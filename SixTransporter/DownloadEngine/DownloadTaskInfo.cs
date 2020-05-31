@@ -22,7 +22,9 @@ namespace SixTransporter.DownloadEngine
 
         public int Threads { get; set; }
 
-        public long BlockSize { get; set; } = 1024 * 1024 * 50;
+        public long BlockSize { get; set; } = 1024 * 1024 * 250;
+
+        public int MaxRetry { get; set; } = 10;
 
         public Dictionary<string, string> Headers { get; set; } = new Dictionary<string, string>()
             { ["User-Agent"] = "Six-Pan download engine" };
